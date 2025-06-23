@@ -1,8 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #101828;
+  --foreground: #212E4A;
+  --font-main: "Unbounded", sans-serif;
+  --font-p: "Nunito Sans", sans-serif;
+  --color-p: #171717;
+  --color-nav: #ededed;
+  --color-main: ;
+  --color-Olight: ;
+  --color-O: ;
+  --color-title: #d3d3d3;
+  --color-gray: #aeaeae;
 }
 
 @theme inline {
@@ -10,17 +23,56 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-main: var(--font-main);
+  --font-p: var(--font-p);
+  --color-main: var(--color-main);
+  --color-title: var(--color-title);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #101828;
+    --foreground: #212E4A;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--font-main);
+}
+
+a{
+  font-family: var(--font-p);
+  color: var(--color-nav);
+} 
+p{
+  font-family: var(--font-p);
+}
+
+/* @media screen and (max-width: 788px){
+  #navbar{
+    display: none;
+  }
+  .secao-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 360px){
+  #navbar{
+    display: none;
+  }
+  .secao-hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    margin: 0 10% 0 10%;
+  }
+} */
